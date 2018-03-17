@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--them cay (click)="clickEvent($event)" -->
+  <div class="map-container" id="mapContainer">
+    <img src="{{link}}" alt="">
+    <div class="tree" *ngFor="let item of trees" [style.left]="item.left" [style.top]="item.top" [class.green]="item.status ==1"
+      [class.red]="item.status == 2" [class.yellow]="item.status == 3"></div>
+    <svg height="1000" width="1333">
+      <polyline id="lineId" points="10 10, 20 20" style="fill:none;stroke:black;stroke-width:3" /> Sorry, your browser does not support inline SVG.
+    </svg>
+  </div>
+
+</ion-content>
