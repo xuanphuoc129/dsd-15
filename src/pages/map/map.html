@@ -6,36 +6,13 @@
 -->
 <ion-header>
 
-  <ion-toolbar>
-    <ion-buttons left>
-      <button ion-button icon-only navPop>
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
-    </ion-buttons>
-    <ion-title text-center>{{title}}</ion-title>
-    <ion-buttons right class="opacity">
-      <button ion-button icon-only >
-        <ion-icon name="arrow-back"></ion-icon>
-      </button>
-    </ion-buttons>
-  </ion-toolbar>
+  <ion-navbar>
+    <ion-title>map</ion-title>
+  </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
-  <div class="map-container" id="mapContainer">
-    <img src="{{link}}" alt="">
-    <div class="tree"  *ngFor="let item of trees" [style.left]="item.left" [style.top]="item.top" [class.green]="item.status ==1"
-      [class.red]="item.status == 2" [class.yellow]="item.status == 3" (click)="goToDetail(item)" tappable></div>
-    <svg height="1000" width="1333" *ngIf="title == 'Tưới cây'">
-      <polyline id="lineId" points="0 0, 0 0" class="path" /> Sorry, your browser does not support inline SVG.
-    </svg>
-    <div class="tree user"></div>
-  </div>
-  <div class="pin a3-container-center" (click)="getLocation()" tappble>
-    <ion-icon name="pin"></ion-icon>
-  </div>
-  <button *ngIf="title == 'Tưới cây' && !isFindPath" (click)="findPath()" ion-button round full class="btn bottom">Tạo tuyến đường tưới cây</button>
-  <button *ngIf="title == 'Tưới cây' && isFindPath" (click)="start()" ion-button round full class="btn bottom">Bắt đầu</button>
+<ion-content padding>
+
 </ion-content>

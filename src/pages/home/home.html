@@ -1,24 +1,29 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons left>
-      <button ion-button ion-only menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-    </ion-buttons>
-
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-icon item-end id="icon" name="bell"></ion-icon>
     <ion-title text-center>Home</ion-title>
-
-    <ion-buttons right >
-      <button ion-button icon-only >
-        <ion-icon name="notifications"></ion-icon>
-      </button>
-    </ion-buttons>
-
-
-  </ion-toolbar>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
   <!--them cay (click)="clickEvent($event)" -->
+  <!-- <div class="map-container" id="mapContainer">
+    <img src="{{link}}" alt="">
+    <div class="tree" *ngFor="let item of trees" [style.left]="item.left" [style.top]="item.top" [class.green]="item.status ==1"
+      [class.red]="item.status == 2" [class.yellow]="item.status == 3"></div>
+    <svg height="1000" width="1333">
+      <polyline id="lineId" points="10 10, 20 20" style="fill:none;stroke:black;stroke-width:3" /> Sorry, your browser does not support inline SVG.
+    </svg>
+  </div> -->
+  <div class="main">
+<img id="one" src="../assets/imgs/logo.png"/>
 
+<button id="btn" ion-button outline  >Tưới cây</button> 
+<button id="btn" ion-button outline  >Xem lịch làm việc</button> 
+<button id="btn" ion-button outline  >Map</button> 
+<button id="btn" ion-button outline  >Thoát</button> 
+</div>
 </ion-content>

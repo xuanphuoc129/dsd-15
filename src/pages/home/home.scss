@@ -1,3 +1,61 @@
 page-home {
- 
+    .map-container{
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        position: relative;
+        img{
+            height: 1000px;
+            width: 1333px;
+            max-width: 1333px;
+        }
+        .tree{
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            border-radius: 50%;
+            background: white;
+            &.red{
+                background: red;
+            }
+            &.green{
+                background: green;
+            }
+            &.yellow{
+                background: yellow;
+            }
+        }
+        svg{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    // #icon{
+    //     float: right;
+    // }
+    .main{
+        width: 50%;
+        margin:auto;
+        margin-top: 5%;
+        border-radius: 5px;
+        box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: .47);
+    }
+    #one{
+        width: 25%;
+        margin-top:31px;
+        margin-left: 38%;
+    }
+    #btn{
+        width: 60%;
+        color: white;
+        border-radius: 5px;
+        background-color:#1FA01F ;
+        margin:auto;
+        margin-top: 10px;
+        margin-bottom: 25px;
+        margin-left:20% ;
+        font-size: 16px;    
+        font-family: 'Times New Roman', Times, serif;
+    }
 }
