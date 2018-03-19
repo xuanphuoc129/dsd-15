@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 537:
+/***/ 544:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TreePopupPageModule", function() { return TreePopupPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WorkSchedulePageModule", function() { return WorkSchedulePageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(80);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tree_popup__ = __webpack_require__(541);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__work_schedule__ = __webpack_require__(552);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,33 +18,33 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TreePopupPageModule = /** @class */ (function () {
-    function TreePopupPageModule() {
+var WorkSchedulePageModule = /** @class */ (function () {
+    function WorkSchedulePageModule() {
     }
-    TreePopupPageModule = __decorate([
+    WorkSchedulePageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__tree_popup__["a" /* TreePopupPage */],
+                __WEBPACK_IMPORTED_MODULE_2__work_schedule__["a" /* WorkSchedulePage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tree_popup__["a" /* TreePopupPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__work_schedule__["a" /* WorkSchedulePage */]),
             ],
         })
-    ], TreePopupPageModule);
-    return TreePopupPageModule;
+    ], WorkSchedulePageModule);
+    return WorkSchedulePageModule;
 }());
 
-//# sourceMappingURL=tree-popup.module.js.map
+//# sourceMappingURL=work-schedule.module.js.map
 
 /***/ }),
 
-/***/ 541:
+/***/ 552:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TreePopupPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WorkSchedulePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(65);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57,29 +57,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the TreePopupPage page.
+ * Generated class for the WorkSchedulePage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var TreePopupPage = /** @class */ (function () {
-    function TreePopupPage(navCtrl, navParams) {
+var WorkSchedulePage = /** @class */ (function () {
+    function WorkSchedulePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.items = [];
+        this.fakeData();
     }
-    TreePopupPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad TreePopupPage');
+    WorkSchedulePage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad WorkSchedulePage');
     };
-    TreePopupPage = __decorate([
+    WorkSchedulePage.prototype.fakeData = function () {
+        this.items = [
+            { color: "#E7EDA3", date: new Date("2018-03-02") },
+            { color: "#F7B8ED", date: new Date("2018-03-07") },
+            { color: "#93D8C8", date: new Date("2018-03-08") },
+            { color: "#EDA3AE", date: new Date("2018-03-09") },
+            { color: "#E7EDA3", date: new Date("2018-03-10") },
+            { color: "#F7B8ED", date: new Date("2018-03-11") },
+            { color: "#93D8C8", date: new Date("2018-03-12") },
+            { color: "#EDA3AE", date: new Date("2018-03-13") }
+        ];
+    };
+    WorkSchedulePage.prototype.goToDetail = function (item) {
+        this.navCtrl.push("WorkScheduleDetailPage", { schedule: item });
+    };
+    WorkSchedulePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-tree-popup',template:/*ion-inline-start:"E:\ionic\dsd-15-master\src\pages\tree-popup\tree-popup.html"*/'<!--\n  Generated template for the TreePopupPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>tree-popup</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"E:\ionic\dsd-15-master\src\pages\tree-popup\tree-popup.html"*/,
+            selector: 'page-work-schedule',template:/*ion-inline-start:"/Users/xuanphuoc129/Documents/workspace/dsd-15/src/pages/work-schedule/work-schedule.html"*/'<!--\n  Generated template for the WorkSchedulePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-toolbar>\n        <ion-buttons left>\n          <button ion-button ion-only navPop>\n            <ion-icon name="arrow-back"></ion-icon>\n          </button>\n        </ion-buttons>\n    \n        <ion-title text-center>Lịch làm việc</ion-title>\n    \n        <ion-buttons right >\n          <button ion-button icon-only >\n            <ion-icon name="search"></ion-icon>\n          </button>\n        </ion-buttons>\n    \n    \n      </ion-toolbar>\n\n</ion-header>\n\n\n<ion-content >\n  <div class="app-content">\n    <div class="date-bar" *ngFor="let item of items" [style.background]="item.color" tappable (click)="goToDetail(item)">\n      <span>Lịch làm việc ngày {{item.date | date: \'dd/MM/yyyy\'}}</span>\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/xuanphuoc129/Documents/workspace/dsd-15/src/pages/work-schedule/work-schedule.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], TreePopupPage);
-    return TreePopupPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], WorkSchedulePage);
+    return WorkSchedulePage;
 }());
 
-//# sourceMappingURL=tree-popup.js.map
+//# sourceMappingURL=work-schedule.js.map
 
 /***/ })
 

@@ -1,6 +1,4 @@
 // http://ionicframework.com/docs/theming/
-
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +12,87 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.opacity {
+  opacity: 0;
+}
+
+.toolbar-background {
+  background: #1FA01F;
+  color: white;
+}
+
+.bar-button {
+  color: white;
+}
+
+.toolbar-title {
+  color: white;
+  font-size: 1.6rem;
+}
+
+.btn {
+  background: #1FA01F;
+  width: 80%;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba($color: #60EAA0, $alpha: .4);
+  margin-left: 10%;
+  text-transform: none;
+}
+
+.bottom {
+  position: absolute;
+  bottom: 16px;
+}
+
+.a3-container-center {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+.a3-items-center{
+    align-items: center;
+}
+.modal-wrapper {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: white;
+}
+
+.big-font {
+  font-size: 1.8rem;
+}
+
+.small-font {
+  font-size: 1.2rem;
+}
+.normal-font{
+    font-size: 1.6rem;
+}
+
+.name {
+  color: white;
+  margin-bottom: .6rem;
+}
+
+.job {
+  color: white;
+}
+
+.active {
+  background: rgba($color: #1FA01F, $alpha: .2);
+  border: none !important;
+  .item-innter{
+      border-bottom: none !important; 
+  }
+}
+
+

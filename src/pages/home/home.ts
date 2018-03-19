@@ -12,11 +12,30 @@ export class HomePage {
   link: string = "./assets/imgs/logo.png";
 
   trees: Array<Trees> = [];
-
+  items: Array<{id: number ,title: string, component: any,push: boolean}>;
+  
   constructor(
     public appController: AppControllerProvider,
     public navCtrl: NavController) {
+    this.loadButton();
+  }
 
+  loadButton(){
+    this.items = [
+      { id :1 ,title: 'Tưới cây', component: "MapPage", push: true},
+      { id: 2 ,title: 'Bản đồ', component: "MapPage", push: true},
+      { id :3 ,title: 'Xem lịch làm việc',component: "WorkSchedulePage", push : true},
+    ];
+
+  }
+
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    if(page.push){
+      this.navCtrl.push(page.component, {title: page.title});
+      return;
+    }
   }
 
   ionViewDidLoad() {

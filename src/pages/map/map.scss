@@ -1,3 +1,64 @@
 page-map {
-
+  .map-container {
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    transform: scale(.6);
+    img {
+      height: 1000px;
+      width: 1333px;
+      max-width: 1333px;
+    }
+    .tree {
+      height: 20px;
+      width: 20px;
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+      z-index: 10;
+      &.red {
+        background: red;
+      }
+      &.green {
+        background: green;
+      }
+      &.yellow {
+        background: yellow;
+      }
+      &.user {
+        background: blue;
+        top: 600px;
+        left: 550px;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+    .path {
+      fill: none;
+      stroke: #f53d3d;
+      stroke-width: 3
+    }
+  }
+  .pin {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: map-get($map: $colors, $key: danger);
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+  }
+  .btn{
+    z-index: 10;
+  }
+  .user{
+    color: red;
+  }
 }

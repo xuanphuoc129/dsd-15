@@ -9,21 +9,11 @@
 </ion-header>
 
 <ion-content>
-  <!--them cay (click)="clickEvent($event)" -->
-  <!-- <div class="map-container" id="mapContainer">
-    <img src="{{link}}" alt="">
-    <div class="tree" *ngFor="let item of trees" [style.left]="item.left" [style.top]="item.top" [class.green]="item.status ==1"
-      [class.red]="item.status == 2" [class.yellow]="item.status == 3"></div>
-    <svg height="1000" width="1333">
-      <polyline id="lineId" points="10 10, 20 20" style="fill:none;stroke:black;stroke-width:3" /> Sorry, your browser does not support inline SVG.
-    </svg>
-  </div> -->
-  <div class="main">
-<img id="one" src="../assets/imgs/logo.png"/>
-
-<button id="btn" ion-button outline  >Tưới cây</button> 
-<button id="btn" ion-button outline  >Xem lịch làm việc</button> 
-<button id="btn" ion-button outline  >Map</button> 
-<button id="btn" ion-button outline  >Thoát</button> 
-</div>
+  <div class="app-content">
+      <img id="one" src="../assets/imgs/tree.png" />
+      <div class="btn-group">
+        <button id="btn" ion-button *ngFor="let item of items" (click)="openPage(item)">{{item.title}}</button>
+        <button id="btn" ion-button >Đăng xuất</button>
+      </div>
+  </div>
 </ion-content>

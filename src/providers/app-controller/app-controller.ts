@@ -4,6 +4,8 @@ import { FirebaseProvider } from '../firebase/firebase';
 import { Trees } from '../class/tree';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
+import { ScrollController } from '../scroll-controller';
+import { ModalController,Modal, Loading, LoadingController } from 'ionic-angular';
 /*
   Generated class for the AppControllerProvider provider.
 
@@ -15,11 +17,16 @@ export class AppControllerProvider {
   
   trees : Array<Trees> = [];
   loadedDataChanel: Subject<string> = new Subject<string>();
+  scrollController : ScrollController;
   isLoadTree : boolean = false;
+  modal : Modal;
   constructor(
-    public firebaseService: FirebaseProvider
+    public loadingCtrl : LoadingController,
+    public firebaseService: FirebaseProvider,
+    public mModalController: ModalController
   ) {
     console.log('Hello AppControllerProvider Provider');
+    this.scrollController = new ScrollController();
   }
 
   loadTree(){
@@ -35,6 +42,14 @@ export class AppControllerProvider {
     })
   }
 
+  showModal(page,params?: any){
+    this.modal = this.mModalController.create(page,params ? params: null );
+    this.modal.present();
+  }
+
+  closeModal(){
+    this.modal.dismiss();
+  }
   getTree(): Array<Trees> {
     return this.trees;
   }
@@ -61,6 +76,26 @@ export class AppControllerProvider {
 
   randomIntFromInterval(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  loading: Loading;
+  showLoading(content?: string, cssClass?: string) {
+    if (this.loading) {
+      this.loading.dismiss();
+    }
+    this.loading = this.loadingCtrl.create({
+      dismissOnPageChange: true,
+      content: content ? content : "Xin đợi!",
+      cssClass: cssClass ? cssClass : ""
+    })
+    this.loading.present();
+  }
+
+  hideLoading() {
+    if (this.loading) {
+      this.loading.dismiss().catch(() => {
+
+      });
+    }
   }
 
 }

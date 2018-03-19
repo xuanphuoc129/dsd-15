@@ -26,16 +26,18 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
     this.appController.loadTree();
-    this.appController.loadedDataChanel.asObservable().subscribe(()=>{
-      if(this.appController.isLoadTree){
-        this.login();
-      }
-    })
+    // this.appController.loadedDataChanel.asObservable().subscribe(()=>{
+    //   if(this.appController.isLoadTree){
+    //     this.login();
+    //   }
+    // })
   }
 
   login(){
+    this.appController.showLoading();
     this.appController.loginWithAccountPassword(this.email,this.password).then(sucess=>{
       console.log(sucess);
+      this.appController.hideLoading();
       this.navCtrl.setRoot(HomePage);
     })
   }
