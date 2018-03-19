@@ -1,0 +1,103 @@
+page-detail-tree {
+    ion-content.content{
+        background: rgba($color: #000000, $alpha: .8);
+    }
+    .scroll-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 !important;
+        flex-flow: column;
+    }
+    .backdrop{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+    }
+    .pop-up{
+        border-radius: 5px;
+        position: relative;
+        width: 90%;
+        margin: auto;
+        height: 60%;
+        box-shadow: 0 3px 6px rgba($color: #BFAEAE, $alpha: .51);
+        background: white;
+        .header-popup{
+            background: map-get($map: $colors, $key: green);
+            color: white;
+            position: relative;
+            width: 100%;
+            padding: 1rem 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            text-align: center;
+            height: 10%;
+            .title{
+                font-size: 1.6rem;
+                color: white;
+            }
+            .btn-close{
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+                background: map-get($map: $colors, $key: danger);
+                color: white;
+                position: absolute;
+                top: .5rem;
+                right: 1rem;
+                font-size: 1.6em;
+                transform: scale(.8);
+            }
+
+        }
+        .content{
+            height: 75%;
+            overflow: scroll;
+            padding: 1rem;
+            line-height: 1.6em;
+            .title-content{
+                font-size: 1.6rem;
+                color: #364350;
+            }
+            .description{
+                font-size: 1.4rem;
+                color: rgba($color: #364350, $alpha: .8);
+            }
+            .circle{
+                height: 6px;
+                width: 6px;
+                margin-left: 1.6rem;
+                &.red{
+                    background: red;
+                }
+            }
+        }
+        .btn-group{
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 15%;
+            padding: 1rem 0;
+            .width-40{
+                width: 40%;
+                border-radius: 10px;
+                font-size: 1rem;
+                text-transform: none;
+                box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .51);
+                margin: 0 1rem;
+                padding: 1rem 0;
+            }
+            .btn-red{
+                background: #F44D4D;
+            }
+            .btn-green{
+                background: #1FA01F;
+            }
+        }
+    }
+}

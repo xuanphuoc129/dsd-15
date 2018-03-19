@@ -34,7 +34,7 @@ export class Trees {
     }
 
     parse(data) {
-        if (data.firebaeId) this.firebaeId = data.firebaeId;
+        if (data.firebase_id) this.firebaeId = data.firebase_id;
         if (data.name) this.name = data.name;
         if (data.id) this.id = data.id;
         if (data.waterNeed) this.waterNeed = data.waterNeed;

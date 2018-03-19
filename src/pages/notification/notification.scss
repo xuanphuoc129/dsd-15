@@ -1,0 +1,33 @@
+page-notification {
+    .container{
+        border-left-style: solid;
+        border-left-width: 6px;
+        padding: 1.6rem;
+        position: relative;
+        font-size: 1.6rem;
+        margin-bottom: 1.6rem;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .2);
+        &.red{
+            border-left-color: #F44D4D;
+        }
+        &.yellow{
+            border-left-color: #EFE032;
+        }
+        &.green{
+            border-left-color: #1FA01F;
+        }
+        .time{
+            position: absolute;
+            bottom: .5rem;
+            right: .5rem;
+            color: rgba($color: #655D5D, $alpha: .53);
+            font-size: 1rem;
+        }
+        .notify{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+}

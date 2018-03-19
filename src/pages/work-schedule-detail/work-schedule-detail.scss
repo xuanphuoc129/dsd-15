@@ -1,0 +1,42 @@
+page-work-schedule-detail {
+  .date {
+    color: white;
+    text-align: center;
+    line-height: 1.3em;
+  }
+  .circle {
+    background: map-get($map: $colors, $key: green);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+  .app-content {
+    padding: 1.6rem;
+  }
+  .title {
+    margin-left: 1.6rem;
+  }
+  .line-container{
+      width: 10px;
+  }
+  .line {
+    width: 1px;
+    background: map-get($map: $colors, $key: green);
+    height: 100%;
+
+  }
+  .description{
+      margin-left: 1.8rem;
+      margin-top: 1rem;
+      .id{
+        font-size: 1.4rem;
+        margin-bottom: .6rem;
+      }
+      .name{
+          text-transform: capitalize;
+          color: black;
+          font-size: 1.4rem;
+          margin-left: 1.6rem;
+      }
+  }
+}
